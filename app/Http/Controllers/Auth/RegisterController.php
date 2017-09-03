@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Forum\Http\Controllers\Auth;
 
-use App\User;
-use App\Http\Controllers\Controller;
+use Forum\User;
+use Forum\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -51,7 +51,14 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'username' => 'required|string|min:5|unique:users',
+            'gender' => 'required',
+            'agree' => 'required',
+        ], [
+            'agree.required' => 'You must agree with terms & conditions',
+
         ]);
+
     }
 
     /**
@@ -66,6 +73,8 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'username' => $data['username'],
+            'gender' => $data['gender'],
         ]);
     }
 }

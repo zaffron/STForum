@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Forum\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'App\Model' => 'App\Policies\ModelPolicy',
-        'App\Thread' => 'App\Policies\ThreadPolicy'
+        'Forum\Model' => 'Forum\Policies\ModelPolicy',
+        'Forum\Thread' => 'Forum\Policies\ThreadPolicy'
     ];
 
     /**

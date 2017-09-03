@@ -1,5 +1,5 @@
 <template>
-    <div class="wrap">
+    <div class="wrap notification-item">
         <a :href="threadUrl">
             {{ unread.data.user.name }} commented on {{ unread.data.thread.subject }}
         </a>

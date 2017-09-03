@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-         App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Forum\Providers\AppServiceProvider::class,
+        Forum\Providers\AuthServiceProvider::class,
+         Forum\Providers\BroadcastServiceProvider::class,
+        Forum\Providers\EventServiceProvider::class,
+        Forum\Providers\RouteServiceProvider::class,
 
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
     ],
@@ -228,5 +228,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
+    /*For testing the Recaptcha*/
+    'NoCaptcha' => 'Anhskohbo\NoCaptcha\Facades\NoCaptcha',
 
 ];

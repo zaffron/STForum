@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: webdev
- * Date: 4/23/2017
- * Time: 7:35 AM
- */
 
-namespace App;
+namespace Forum;
 
 
 trait LikableTrait

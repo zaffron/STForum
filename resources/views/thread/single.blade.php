@@ -2,11 +2,11 @@
 
 
 @section('content')
-    <div class="content-wrap well">
-        <h4>{{$thread->subject}}</h4>
+    <div class="content-wrap">
+        <h3>{{$thread->subject}}</h3>
         <hr>
 
-        <div class="thread-details">
+        <div class="thread-details well-lg bg-info">
             {!! \Michelf\Markdown::defaultTransform($thread->thread)  !!}
         </div>
         <br>

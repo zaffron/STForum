@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Notifications;
+namespace Forum\Notifications;
 
 use Carbon\Carbon;
 use Illuminate\Bus\Queueable;

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Forum\Http\Controllers;
 
-use App\Comment;
+use Forum\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 

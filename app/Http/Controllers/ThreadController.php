@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Forum\Http\Controllers;
 
-use App\Tag;
-use App\Thread;
+use Forum\Tag;
+use Forum\Thread;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
@@ -70,7 +70,7 @@ class ThreadController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Thread $thread
+     * @param  \Forum\Thread $thread
      * @return \Illuminate\Http\Response
      */
     public function show(Thread $thread)
@@ -81,7 +81,7 @@ class ThreadController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Thread $thread
+     * @param  \Forum\Thread $thread
      * @return \Illuminate\Http\Response
      */
     public function edit(Thread $thread)
@@ -93,7 +93,7 @@ class ThreadController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  \App\Thread $thread
+     * @param  \Forum\Thread $thread
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Thread $thread)
@@ -106,7 +106,7 @@ class ThreadController extends Controller
         //validate
         $this->validate($request, [
             'subject' => 'required|min:10',
-            'type'    => 'required',
+            'tags'    => 'required',
             'thread'  => 'required|min:20'
         ]);
 
@@ -120,7 +120,7 @@ class ThreadController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Thread $thread
+     * @param  \Forum\Thread $thread
      * @return \Illuminate\Http\Response
      */
     public function destroy(Thread $thread)

@@ -8,10 +8,15 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Forum') }}</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,400i,500,500i,700,700i,800,800i" rel="stylesheet"> 
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('styles')
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}">
 
     <!-- Scripts -->
     <script>
@@ -36,7 +41,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        <strong>Study Tweaks Forum</strong>
                     </a>
                 </div>
 

@@ -7,10 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Webdev forum</title>
-    <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css">
+    <title>Study Tweaks forum</title>
+
+    {{-- Font Styles --}}
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,400i,500,500i,700,700i,800,800i" rel="stylesheet"><link rel="stylesheet" href="{{asset('css/main.css')}}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/css/selectize.min.css">
-    <link rel="stylesheet" href="{{asset('css/main.css')}}">
+    {{-- Style Sheets --}}
+    <link rel="stylesheet" href="https://bootswatch.com/lumen/bootstrap.min.css">
+    @yield('styles')
 
     <!-- Scripts -->
     <script>
@@ -23,7 +28,9 @@
 <div id="app">
 @include('layouts.partials.navbar')
 
+@if(Auth::guest())
 @yield('banner')
+@endif
 
 <div class="container">
 
@@ -53,11 +60,12 @@
 {{--<script src="https://code.jquery.com/jquery-3.1.1.min.js"--}}
         {{--integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="--}}
         {{--crossorigin="anonymous"></script>--}}
-{{--<!-- Latest compiled and minified JS -->--}}
+{{-- Latest compiled and minified JS --}}
 {{--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--}}
 <script src="{{asset('js/main.js')}}"></script>
 <script src="{{asset('js/app.js')}}"></script>
 
 @yield('js')
+@stack('scripts')
 </body>
 </html>

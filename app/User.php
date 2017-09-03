@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Forum;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'username', 'gender'
     ];
 
     /**
@@ -31,6 +31,7 @@ class User extends Authenticatable
     {
         return 'name';
     }
+    
     public function threads()
     {
         return $this->hasMany(Thread::class);

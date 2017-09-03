@@ -5,8 +5,8 @@
                 class="badge alert-danger">{{unreadNotifications.length}}</span>
         </a>
 
-        <ul class="dropdown-menu" role="menu">
-            <li>
+        <ul class="dropdown-menu notification-holder" role="menu">
+            <li class="notification-list-item">
                 <notification-item v-for="unread in unreadNotifications" :unread="unread"></notification-item>
             </li>
         </ul>

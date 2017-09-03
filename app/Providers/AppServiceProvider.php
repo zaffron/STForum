@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Providers;
+namespace Forum\Providers;
 
-use App\Tag;
+use Forum\Tag;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
