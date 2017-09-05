@@ -12,6 +12,7 @@
 */
 
 // Home routes
+
 Route::get('/', function () {
     $threads=Forum\Thread::paginate(15);
     return view('welcome',compact('threads'));
@@ -62,3 +63,8 @@ Route::post('comment/like','LikeController@toggleLike')->name('toggleLike');
 Route::get('/markAsRead',function(){
     auth()->user()->unreadNotifications->markAsRead();
 });
+
+/*Admin area*/
+Route::get('/admin_dashboard', 'AdminController@index')->middleware('admin')->name('admin');
+Route::get('/user_management', 'AdminController@usersManagement')->middleware('admin');
+Route::get('/tags_management', 'AdminController@tagsManagement')->middleware('admin');

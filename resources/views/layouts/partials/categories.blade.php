@@ -8,7 +8,17 @@
         </a>
         @foreach($tags as $tag)
         <a href="{{route('thread.index',['tags'=>$tag->id])}}" class="list-group-item">
-            <span class="badge">{{count($tag)}}</span>
+            <span class="badge">
+                @php
+                $count = 0;
+                foreach($threads as $thread){
+                    if($thread->tag_id == $tag->id){
+                        $count++;
+                    }
+                }
+                echo $count;
+                @endphp
+            </span>
             {{$tag->name}}
         </a>
         @endforeach

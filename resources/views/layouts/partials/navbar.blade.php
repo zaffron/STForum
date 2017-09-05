@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default navbar-static-top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="navbar-header">
 
             <!-- Collapsed Hamburger -->
@@ -42,7 +42,9 @@
                                 <a href="{{ route('user_profile',auth()->user()) }}">
                                     My Profile
                                 </a>
-                            
+                                @if(Auth::user() && Auth::user()->admin == 1)
+                                <a href=" {{route('admin', auth()->user())}} ">Admin Panel</a>
+                                @endif
                                 <a href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

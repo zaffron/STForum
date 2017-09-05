@@ -4,8 +4,11 @@ body{
 body h1{
 	font-family: 'Raleway', sans-serif;
 }
-.jumbotron .container{
-	
+.the-divider{
+    border-bottom:2px solid #fff;
+}
+.admin-cards{
+    background-color: #fff;
 }
 .content-heading{
     margin-bottom:10px;
@@ -35,3 +38,51 @@ body h1{
 .notifs-container{
 	border:1px solid red;
 }
+
+/*Sidebar*/
+.nav-sidebar{
+    margin-top:40px;
+    width:250px;
+    height: 100%;
+    border-top:4px solid #e0e0e0;
+}
+.sidebar-nav li a{
+    font-size:14px;
+    color:#e0e0e0;
+    font-weight: bolder;
+}
+.sidebar-nav li.active a{
+    color:skyblue;
+}
+.sidebar-nav li a:hover{
+    background-color: #00A2D3;
+}
+.sidebar-nav li a i{
+    margin-right:15px;
+}
+.sidebar-user-details{
+    padding-top:20px;
+    padding-bottom: 20px;
+    border-bottom:5px solid #e0e0e0;
+    height: 150px;
+}
+.sidebar-image-holder{
+    width: 100px;
+    height: 100px;
+    padding-left:10px;
+    display: block;
+    float:left;
+}
+.sidebar-details-holder{
+    width:145px;
+    height: 100px;
+    padding-left:20px;
+    padding-top:20px;
+    float: right;
+}
+.sidebar-image-holder img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+

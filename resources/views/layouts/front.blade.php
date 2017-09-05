@@ -12,9 +12,10 @@
     {{-- Font Styles --}}
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,400i,500,500i,700,700i,800,800i" rel="stylesheet"><link rel="stylesheet" href="{{asset('css/main.css')}}">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Optional theme -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/css/selectize.min.css">
     {{-- Style Sheets --}}
-    <link rel="stylesheet" href="https://bootswatch.com/lumen/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css">
     @yield('styles')
 
     <!-- Scripts -->

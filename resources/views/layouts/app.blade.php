@@ -16,8 +16,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('styles')
-    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}">
-
+    <link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css">
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
