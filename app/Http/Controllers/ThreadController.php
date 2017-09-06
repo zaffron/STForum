@@ -6,6 +6,7 @@ use Forum\Tag;
 use Forum\Thread;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use DB;
 
 class ThreadController extends Controller
 {
@@ -38,7 +39,8 @@ class ThreadController extends Controller
      */
     public function create()
     {
-        return view('thread.create');
+        $threads = Thread::all();
+        return view('thread.create', compact('threads'));
     }
 
     /**
@@ -75,7 +77,8 @@ class ThreadController extends Controller
      */
     public function show(Thread $thread)
     {
-        return view('thread.single', compact('thread'));
+        $threads = Thread::all();
+        return view('thread.single', compact('thread', 'threads'));
     }
 
     /**
@@ -86,7 +89,8 @@ class ThreadController extends Controller
      */
     public function edit(Thread $thread)
     {
-        return view('thread.edit', compact('thread'));
+        $threads = Thread::all();
+        return view('thread.edit', compact('thread', 'threads'));
     }
 
     /**

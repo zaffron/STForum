@@ -6,8 +6,7 @@
 @section('category')
     <div class="col-md-2 text-center" >
     <div class="dp">
-    <img src="http://www.sbsc.in/images/dummy-profile-pic.png" height="150" width="150" alt="profile-pic"><br><br>
-    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-cloud"></span> Upload Image</button>
+    <img src="{{asset('images').'/'.$user->user_image  }}" height="150" width="150" alt="profile-pic"><br><br>
     </div>
         <h3>
             {{ $user->name }}
@@ -16,6 +15,7 @@
             {{ $user->description }}
         </h5>
         <button class="btn btn-primary btn-xs" id="descUpdate">Update Description</button>
+        <a href="{{route('user_profile.edit',$user->username)}}"><button class="btn btn-info btn-xs"><span class="glyphicon glyphicon-leaf"></span> Edit Profile</button></a>
     </div>
 
 @endsection
@@ -72,6 +72,7 @@
         $(document).ready(function(){
             $('#descUpdate').click(function(){
                 $('.description-updater').css('display','block');
+                $('.content').css('opacity','0.5');
             });
             $('.description-updater').click(function(e){
                 if(e.target.className == 'description-updater'){

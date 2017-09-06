@@ -13,10 +13,14 @@
 				<th><h3>ID</h3></th>
 				<th><h3>Username</h3></th>
 				<th><h3>No. of posts</h3></th>
+				<th><h3>Remove User</h3></th>
 			</tr>
 			@foreach($users as $user)
+			@if($user->id == Auth::user()->id)
+				@continue
+			@endif
 			<tr>
-					<td><a href="{{route('user_profile', $user->name)}}" class="table-link">{{$user->name}}</a></td>
+					<td><a href="{{route('user_profile', $user->username)}}" class="table-link">{{$user->name}}</a></td>
 					<td>{{$user->id}}</td>
 					<td>{{$user->username}}</td>
 					@php
@@ -28,6 +32,13 @@
 						}
 					@endphp
 					<td>{{$count}}</td>
+					<td>
+						<form action="{{route('user.destroy',$user->id)}}" method="POST" class="inline-it">
+						    {{csrf_field()}}
+						    <input value="{{$user->id}}" name="id" type="hidden">
+						    <input class="btn btn-sm btn-danger" type="submit" value="Delete">
+						</form>
+					</td>
 			</tr>
 			@endforeach
 		</table>

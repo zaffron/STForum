@@ -42,7 +42,6 @@
 
     <div class="row">
         @section('category')
-{{--            <a class="btn btn-primary"  href="{{route('thread.create')}}">Create Thread</a> <br>--}}
             {{--//category section--}}
             @include('layouts.partials.categories')
         @show

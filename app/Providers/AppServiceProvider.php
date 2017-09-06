@@ -17,6 +17,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+        $threads_data = \DB::table('tag_thread')->get();
+        View::share('threads_data', $threads_data);
         View::share('tags', Tag::all());
     }
 

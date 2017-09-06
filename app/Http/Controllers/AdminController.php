@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Forum\User;
 use Forum\Thread;
 use Carbon\Carbon;
+use Forum\Tag;
 
 class AdminController extends Controller
 {
@@ -28,5 +29,20 @@ class AdminController extends Controller
     public function tagsManagement()
     {
     	return view('admin.partials.tagsManagement');
+    }
+    public function tagsUpdater(Request $request)
+    {
+        $this->validate($request, ['tag_name' => 'required|string|max:20']);
+        $tag = Tag::create([
+            'name' => $request->tag_name,
+        ]);
+        return back()->withMessage("Tag Created Successfully");
+    }
+    public function userDelete(Request $request)
+    {
+        $id = $request['id'];
+        $user = User::find($id);
+        $user->delete();
+        return back()->withMessage('User has been removed');
     }
 }

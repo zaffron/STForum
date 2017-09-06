@@ -7,7 +7,7 @@
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown"> {{Auth::user()->name}} <span class="glyphicon glyphicon-fire"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Profile</a></li>
+          <li><a href="{{route('user_profile', Auth::user())}}">Profile</a></li>
           <li><a href="/">General User</a></li>
           <li><a href="{{ route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a></li>
         </ul>

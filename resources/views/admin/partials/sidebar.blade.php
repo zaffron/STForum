@@ -2,7 +2,7 @@
   <nav class="navbar navbar-default navbar-fixed-top nav-sidebar" id="sidebar-wrapper" role="navigation">
   <div class="sidebar-user-details">
     <div class="sidebar-image-holder">
-        <img src="http://www.sbsc.in/images/dummy-profile-pic.png" alt="user-image">
+        <img src="{{asset('images').'/'.Auth::user()->user_image  }}" alt="user-image">
     </div>
     <div class="sidebar-details-holder">
         <h4 style="color:skyblue;font-weight: 900;">{{Auth::user()->username}}</h4>

@@ -1,13 +1,12 @@
 .description-updater{
 	background-color: #000000;
-	opacity: 0.9;
 	position: fixed;
 	z-index:1100;
 	top:0;
 	left:0;
 	height: 100%;
 	width: 100%;
-	display: none;	
+	display: none;
 }
 .description-container{
 	padding-top:100px;
@@ -15,6 +14,7 @@
 	height: 500px;
 	width:500px;
 	margin:0 auto;
+	display: block;
 }
 
 .description-container h2{
@@ -24,7 +24,129 @@
 	border-bottom: 5px solid #f3f3f3;
 }
 
-.description-container textarea{
+.description-container textarea.form-input{
 	height: 200px;
 	width:500px;
+}
+
+/* User profile Edit */
+.side-heading{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.side-heading h4{
+	font-weight: 900;
+	font-size: 25px;
+	font-family: arial;
+}
+hr.divider{
+	border-bottom: 4px solid white;
+}
+.content-holder{
+	border-left: 5px solid orange;
+}
+.update-window{
+}
+.form-data-control{
+	width:85%;
+	border-radius: none;
+	border:none;
+	padding-left:10px;
+	font-weight: bolder;
+	margin-bottom: 5px;
+	height: 40px;
+}
+textarea.form-data-control{
+	padding-top: 10px;
+	height: 100px;
+}
+.btn-update{
+	margin-top: -4px;
+	height: 40px;
+	width: 15%;
+}
+.btn-textarea{
+	height: 100px;
+	width:15%;
+	margin-top:-95px;
+}
+
+/*Updation Form Holder*/
+#update-form-container{
+	height: 100%;
+	width:100%;
+	position: absolute;
+	top:0;
+	left:0;
+	margin:0 auto;
+	background-color: black;
+	display: none;
+	padding-top: 150px;
+	text-align: center;
+}
+/*Profile Pic Uploader*/
+.profile-pic {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    vertical-align: middle;
+    text-align: center;
+    color: transparent;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.profile-pic:hover {
+    background-color: rgba(0,0,0,.5);
+    z-index: 10000;
+    color: #fff;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.profile-pic span {
+    display: inline-block;
+    padding-top: 5.5em;
+    padding-bottom: 4.5em;
+}
+#progressbox {
+border: 1px solid #0099CC;
+padding: 1px; 
+position:relative;
+width:400px;
+border-radius: 3px;
+margin: 10px;
+display:none;
+text-align:left;
+}
+#progressbar {
+height:20px;
+border-radius: 3px;
+background-color: #003333;
+width:1%;
+}
+#statustxt {
+top:3px;
+left:50%;
+position:absolute;
+display:inline-block;
+color: #000000;
+}
+/*Profile Image Container*/
+.update-image-container{
+	height: 0px;
+	width:0px;
+	top:170px;
+	left:70px;
+	position: absolute;
+	border:1px solid red;
+}
+#img_selector{
+	visibility: hidden;
+}
+#SubmitButton{
+	visibility: hidden;
 }
